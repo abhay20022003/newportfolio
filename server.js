@@ -9,16 +9,15 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-// ✅ Allow CORS only for your frontend
 app.use(
   cors({
     origin: "https://myportfolio-mu-lake.vercel.app", // Your frontend URL
     methods: "GET, POST",
-    allowedHeaders: "Content-Type",
+    allowedHeaders: ["Content-Type"],
+    credentials: true,
   })
 );
 
-// ✅ Handle Contact Form Submission
 app.post("/contact", async (req, res) => {
   const { name, email, message } = req.body;
 
@@ -46,6 +45,5 @@ app.post("/contact", async (req, res) => {
   }
 });
 
-// ✅ Use dynamic port for deployment
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// ✅ Export for Vercel
+export default app;
