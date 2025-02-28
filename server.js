@@ -1,9 +1,10 @@
+
+// server.js (Backend)
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import nodemailer from "nodemailer";
 
-// Load environment variables
 dotenv.config();
 
 const app = express();
@@ -11,16 +12,19 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "https://myportfolio-mu-lake.vercel.app", // Your frontend URL
+    origin: [
+      "http://localhost:3000", // Local frontend
+      "https://myportfolio-mu-lake.vercel.app", // Deployed frontend
+    ],
     methods: "GET, POST",
     allowedHeaders: ["Content-Type"],
     credentials: true,
   })
 );
 
-app.post("/contact", async (req, res) => {
+app.post("/api/contact", async (req, res) => {
   const { name, email, message } = req.body;
-
+  
   let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -45,5 +49,4 @@ app.post("/contact", async (req, res) => {
   }
 });
 
-// ✅ Export for Vercel
 export default app;
