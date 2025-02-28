@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: [
-      "http://localhost:3000", // Local frontend
+      "http://localhost:5000", // Local frontend
       "https://myportfolio-azure-xi.vercel.app/", // Deployed frontend
     ],
     methods: "GET, POST",
