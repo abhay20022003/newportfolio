@@ -14,7 +14,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000", // Local frontend
-      "https://myportfolio-mu-lake.vercel.app", // Deployed frontend
+      "https://myportfolio-azure-xi.vercel.app/", // Deployed frontend
     ],
     methods: "GET, POST",
     allowedHeaders: ["Content-Type"],
