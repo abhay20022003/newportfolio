@@ -19,7 +19,7 @@ function ContactMe() {
     const API_URL =
     process.env.NODE_ENV === "development"
       ? "http://localhost:5000/contact"
-      : "http://localhost:5000/contact"; // Change this if needed for production
+      : "https://newportfolio-backend.vercel.app/contact"; // Change this if needed for production
   
     try {
       const response = await fetch(API_URL, {
