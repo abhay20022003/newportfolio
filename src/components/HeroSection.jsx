@@ -10,7 +10,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-500 opacity-30 blur-3xl"></div>
 
       <div className="container mx-auto px-6 lg:px-16 flex flex-col md:flex-row items-center justify-center">
-        
+
         {/* Left Section */}
         <div className="md:w-1/2 text-center md:text-left">
           <h1 className="text-4xl md:text-6xl font-extrabold">
@@ -34,22 +34,22 @@ const HeroSection = () => {
 
           {/* Description */}
           <p className="mt-6 text-lg text-gray-300 leading-relaxed">
-            Passionate about designing and developing responsive, user-friendly web applications that deliver seamless experiences. 
-            Proficient in <span className="text-blue-300 font-semibold">React, Tailwind CSS,</span> and modern JavaScript frameworks, 
-            with a keen eye for clean, efficient code and intuitive UI/UX design. 
+            Passionate about designing and developing responsive, user-friendly web applications that deliver seamless experiences.
+            Proficient in <span className="text-blue-300 font-semibold">React, Tailwind CSS,</span> and modern JavaScript frameworks,
+            with a keen eye for clean, efficient code and intuitive UI/UX design.
           </p>
-  {/* Buttons */}
-  {/* <div className="mt-6 flex justify-center md:justify-start space-x-4">
+          {/* Buttons */}
+          <div className="mt-6 flex justify-center md:justify-start space-x-4">
             <motion.a
-              href="/Abhay_Singh_Resume.pdf"
-              download
+              href="/AbhayCV.pdf" // Ensure the file is in the public folder
+              download="AbhayCV.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg shadow-lg transition-all"
             >
               Download Resume
             </motion.a>
-          </div> */}
+          </div>
         </div>
         {/* Right Section - Profile Image */}
         <div className="md:w-1/2 flex justify-center mt-12 md:mt-0 relative">
