@@ -38,9 +38,8 @@ const HeroSection = () => {
             Proficient in <span className="text-blue-300 font-semibold">React, Tailwind CSS,</span> and modern JavaScript frameworks, 
             with a keen eye for clean, efficient code and intuitive UI/UX design. 
           </p>
-
-          {/* Buttons */}
-          <div className="mt-6 flex justify-center md:justify-start space-x-4">
+  {/* Buttons */}
+  {/* <div className="mt-6 flex justify-center md:justify-start space-x-4">
             <motion.a
               href="/Abhay_Singh_Resume.pdf"
               download
@@ -50,9 +49,8 @@ const HeroSection = () => {
             >
               Download Resume
             </motion.a>
-          </div>
+          </div> */}
         </div>
-
         {/* Right Section - Profile Image */}
         <div className="md:w-1/2 flex justify-center mt-12 md:mt-0 relative">
           {/* Animated Background Circle */}
